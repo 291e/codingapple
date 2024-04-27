@@ -1,7 +1,23 @@
-.alert-box {
-  background-color: skyblue;
-  padding: 20px;
-  color: white;
-  border-radius: 5px;
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  justify-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px 10px;
+}
+
+.subMenu span {
+  padding: 10px 0;
+  border-bottom: 0.5px solid gray;
+}
+
+.show {
   display: none;
 }

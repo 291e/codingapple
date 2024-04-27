@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="aa">
+      <p id="title">알림창</p>
+      <button id="close">X</button>
+    </div>
+    <button onclick="idButton()">버튼1</button>
+    <button onclick="passButton()">버튼2</button>
+
+    <script>
+      function idButton() {
+        document.getElementById("title").innerHTML = "아이디 입력";
+        document.getElementById("aa").style.display = "block";
+      }
+
+      function passButton() {
+        document.getElementById("title").innerHTML = "비밀번호 입력";
+        document.getElementById("aa").style.display = "block";
+      }
+
+      document.getElementById("close").addEventListener("click", function () {
+        document.getElementById("aa").style.display = "none";
+      });
+
+      //   function caseButton(a) {
+      //     document.getElementById("aa").style.display = a;
+      //   }
+
+      //   function caseButton2(b) {
+      //     document.getElementById("aa").innerText = b;
+      //   }
+
+      //   function caseOpen() {
+      //     document.getElementById("aa").style.display = "block";
+      //   }
+      //   function caseClose() {
+      //     document.getElementById("aa").style.display = "none";
+      //   }
+    </script>
+  </body>
+</html>

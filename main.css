@@ -1,9 +1,6 @@
-.alert-box {
-  background-color: skyblue;
-  padding: 20px;
-  color: white;
-  border-radius: 5px;
-  display: none;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .navBar {
@@ -15,17 +12,48 @@
   font-weight: 600;
 }
 
-.subMenu {
+.black-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show-modal {
+  opacity: 1;
+}
+
+.white-bg {
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 0 10px 10px 10px;
+  width: 300px;
 }
 
-.subMenu span {
-  padding: 10px 0;
-  border-bottom: 0.5px solid gray;
+.white-bg span {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.show {
-  display: none;
+.white-bg button {
+  width: 50px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 5px;
+  border-left: 1px solid black;
 }

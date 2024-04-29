@@ -24,13 +24,11 @@
     <button id="test-btn">로그인</button>
 
     <script>
-      $(".black-bg").hide();
       $("#test-btn").on("click", function () {
-        $(".black-bg").show();
         $(".black-bg").addClass("show-modal");
       });
       $("#close-btn").on("click", function () {
-        $(".black-bg").hide();
+        $(".black-bg").removeClass("show-modal");
       });
     </script>
   </body>

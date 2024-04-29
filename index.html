@@ -3,46 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="alert-box" id="aa">
-      <p id="title">알림창</p>
-      <button id="close">X</button>
+    <div class="navBar">
+      <div>Navbar</div>
+      <button
+        id="nevToggle"
+        style="
+          width: 50px;
+          height: 30px;
+          border: 1px solid grey;
+          border-radius: 5px;
+        "
+      >
+        O
+      </button>
     </div>
-    <button onclick="idButton()">버튼1</button>
-    <button onclick="passButton()">버튼2</button>
+
+    <div class="subMenu show">
+      <span style="border-top: 0.5px solid gray">A</span><span>B</span
+      ><span>C</span><span>D</span><span>E</span>
+    </div>
+
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <button id="test-btn">버튼</button>
 
     <script>
-      function idButton() {
-        document.querySelector("#title").innerHTML = "아이디 입력";
-        document.querySelector("#aa").style.display = "block";
-      }
-
-      function passButton() {
-        document.querySelector("#title").innerHTML = "비밀번호 입력";
-        document.querySelector("#aa").style.display = "block";
-      }
-
-      document.querySelector("#close").addEventListener("click", function () {
-        document.querySelector("#aa").style.display = "none";
+      $("#test-btn").on("click", function () {
+        $(".hello").hide();
       });
-
-      //   function caseButton(a) {
-      //     document.getElementById("aa").style.display = a;
-      //   }
-
-      //   function caseButton2(b) {
-      //     document.getElementById("aa").innerText = b;
-      //   }
-
-      //   function caseOpen() {
-      //     document.getElementById("aa").style.display = "block";
-      //   }
-      //   function caseClose() {
-      //     document.getElementById("aa").style.display = "none";
-      //   }
     </script>
   </body>
 </html>

@@ -76,3 +76,20 @@ body {
   border-radius: 5px;
   color: white;
 }
+
+.btn-middle {
+  background-color: brown;
+  border: 0px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+
+.btn-middle:first-child {
+  margin-right: 50px;
+  background-color: cornflowerblue;
+}
+
+#treeSix div {
+  text-align: center;
+}

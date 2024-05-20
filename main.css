@@ -104,3 +104,20 @@ body {
 .threeSix:nth-child(1) {
   align-items: center;
 }
+
+.quiz span,
+input {
+  margin-bottom: 10px;
+}
+
+.quiz input {
+  padding: 5px;
+}
+
+.quiz button {
+  background-color: brown;
+  border: 0px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}

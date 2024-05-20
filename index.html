@@ -65,7 +65,6 @@
 
     <div style="background-color: bisque">
       <div
-        id="treeSix"
         style="
           padding: 20px;
           display: flex;
@@ -73,21 +72,27 @@
           align-items: flex-start;
         "
       >
-        <span style="font-size: 18px; padding-bottom: 10px"
-          >3, 6, 9 게임 예제</span
-        >
-        <div
-          style="
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            margin-bottom: 10px;
-            border-radius: 10px;
-          "
-        ></div>
-        <div>
-          <button class="btn-middle">통과</button>
-          <button class="btn-middle">박수</button>
+        <div class="threeSix" style="display: flex; flex-direction: column">
+          <span style="font-size: 18px; padding-bottom: 10px"
+            >3, 6, 9 게임 예제</span
+          >
+          <div
+            id="threeSixBox"
+            style="
+              width: 50px;
+              height: 50px;
+              background-color: white;
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 22px;
+            "
+          ></div>
+          <div>
+            <button class="btn-middle" id="pass-btn">통과</button>
+            <button class="btn-middle" id="clap-btn">박수</button>
+          </div>
         </div>
       </div>
     </div>
@@ -107,17 +112,49 @@
       }
       공인중개사(50, 10);
 
-      function 삼육구게임(num) {
-        if (num % 9 == 0) {
-          console.log("박수박수");
-        } else if (num % 3 == 0) {
+      let currentNumber = 1;
+
+      function updateThreeSixBix(num) {
+        const treeSixBox = document.querySelector("#threeSixBox");
+        treeSixBox.textContent = num;
+      }
+
+      function threeSixNine(num, action) {
+        if (num % 3 === 0 && action === "clap") {
+          return true;
+        } else if (num % 3 !== 0 && action === "pass") {
           console.log("박수");
+          return true;
         } else {
-          console.log("통과");
+          return false;
         }
       }
 
-      삼육구게임(18);
+      updateThreeSixBix(currentNumber);
+
+      document
+        .querySelector("#pass-btn")
+        .addEventListener("click", function () {
+          const result = threeSixNine(currentNumber, "pass");
+          if (result) {
+            currentNumber++;
+          } else {
+            currentNumber = 1;
+          }
+          updateThreeSixBix(currentNumber);
+        });
+
+      document
+        .querySelector("#clap-btn")
+        .addEventListener("click", function () {
+          const result = threeSixNine(currentNumber, "clap");
+          if (result) {
+            currentNumber++;
+          } else {
+            currentNumber = 1;
+          }
+          updateThreeSixBix(currentNumber);
+        });
     </script>
 
     <script>
